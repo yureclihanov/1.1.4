@@ -4,7 +4,11 @@ import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +20,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     }
 
     public void createUsersTable() {
+
         String sql = "CREATE TABLE if NOT EXISTS Users" +
                 " (id INT PRIMARY KEY NOT NULL, name VARCHAR(45), lastName VARCHAR(45), age INT);";
 
