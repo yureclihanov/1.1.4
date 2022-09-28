@@ -64,6 +64,7 @@ public class UserDaoJDBCImpl implements UserDao {
         }
     }
 
+
     public void removeUserById(long id) {
         String sql = "DELETE FROM Users WHERE id = ?;";
 
